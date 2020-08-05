@@ -1,0 +1,64 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <!--Sidebar content-->
+  
+        <p>
+          Search:
+ 
+        </p>
+
+        <table>  
+            <tr>  
+                <td>EmpId: </td>  
+                <td>  
+                    <span>{{ EmpModel.Id }}</span></td>  
+            </tr>  
+            <tr>  
+                <td>Name:</td>  
+                <td>  
+                    <input type="text" data-ng-model="EmpModel.Name" /></td>  
+            </tr>  
+            <tr>  
+                <td>Salary:</td>  
+                <td>  
+                    <input type="number" data-ng-model="EmpModel.Salary" /></td>  
+            </tr>  
+            <tr>  
+                <td>  
+                    <input type="button" value="Save Data" data-ng-click="AddData()" /></td>  
+                <td>  
+                    <input type="button" value="Update Data" data-ng-click="UpdateData()" /></td>  
+            </tr>  
+        </table>  
+  
+        <table class="table table-hover" border="0" >  
+            <thead>  
+                <th>Id</th>  
+                <th>Name</th>  
+                <th>Salary</th>  
+            </thead>  
+            <tr data-ng-repeat="Emp in EmpList" data-ng-click="BindSelectedData(Emp)">  
+                <td>{{ Emp.Id }}</td>  
+                <td>{{ Emp.Name }}</td>  
+                <td>{{ Emp.Salary }}</td>  
+                <td>  
+                    <input type="button" value="Delete" data-ng-click="DeleteData(Emp)" />
+                    <button type="button" class="btn btn-primary" ng-model="singleModel" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0"
+                    data-ng-click="DeleteData(Emp)">
+                        Single Toggle
+                    </button>
+                </td>  
+            </tr>  
+        </table>  
+
+
+
+    </div>  
+
+  
+      </div>
+
+    </div>
+  </div>
+  
