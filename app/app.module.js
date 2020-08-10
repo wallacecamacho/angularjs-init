@@ -8,3 +8,4 @@ angular.module('app.init', [
   'core',
   'convidado.module'
 ]);
+

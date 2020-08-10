@@ -6,6 +6,7 @@
   transition: 0.5s linear all;
 }
 
+
 .phone-list-item.ng-enter,
 .phone-list-item.ng-leave.ng-leave-active,
 .phone-list-item.ng-move {
