@@ -6,12 +6,12 @@ angular.
     function config($routeProvider) {
       $routeProvider.
         when('/convidado', {
-          templateUrl: 'modules/convidado/convidado.editNew.html',
+          templateUrl: 'modules/convidado/controler/convidado.editNew.html',
           controller: 'convidado.controller',
           controllerAs: 'vm'
         }).
         when('/convidado/:convidadoId', {
-          templateUrl: 'modules/convidado/convidado.edit.html',
+          templateUrl: 'modules/convidado/controler/convidado.edit.html',
           controller: 'convidado.controller',
           controllerAs: 'vm'
         }).

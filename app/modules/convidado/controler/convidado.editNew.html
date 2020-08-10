@@ -1,0 +1,76 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+
+        <div class="col-md-4">
+            <!--Sidebar content-->
+
+            <div>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">EmpId</label>
+                        <span>{{ EmpModel.Id }}</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" data-ng-model="EmpModel.Nome" class="form-control" id="nome" placeholder="Informe seu nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="Identidade">Identidade</label>
+                        <input type="text" data-ng-model="EmpModel.Identidade" class="form-control" id="Identidade" placeholder="Informe sua identificacão">
+                    </div>
+                    <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <select data-ng-model="EmpModel.UfData">
+     
+                                    <option ng-selected="EmpModel.UfData == item.sigla" 
+                                        ng-repeat="state in ufDataSelect" 
+                                        ng-value="state.sigla">{{state.nome}}</option>
+                            </select>
+                    </div>
+
+                    <div>
+                    <input type="button" class="btn btn-default" value="Salvar" data-ng-click="AddData()" />
+                    <button type="button" class="btn btn-default glyphicon-class" data-ng-click="UpdateData()">Atualizar</button>
+                    </div>
+                    <div>
+                        <input type="text" data-ng-model="filtro" class="form-control" id="filtro'" placeholder="Filtrar">
+                    </div>
+                </form>
+            </div>
+
+            <div>
+                <table class="table table-hover" border="0">
+                    <thead>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Identidade</th>
+                        <th>Estado</th>
+                    </thead>
+                    <tr data-ng-repeat="Emp in EmpList | filter:filtro | orderBy:Emp.Id" data-ng-click="BindSelectedData(Emp)">
+                        <td>{{ Emp.Id }}</td>
+                        <td>{{ Emp.Nome }}</td>
+                        <td>{{ Emp.Identidade }}</td>
+                        <td>{{ Emp.UfData }}</td>
+                        <td>
+                            <button type="button" class="btn btn-danger" ng-model="singleModel" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0"
+                                data-ng-click="DeleteData(Emp)">
+                                <span class="glyphicon glyphicon-trash"></span>
+                                Remover
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--
+    <div convidado-diretive></div>
+
+    <convidado-diretive></convidado-diretive>
+-->
