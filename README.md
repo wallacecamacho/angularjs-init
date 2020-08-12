@@ -1,23 +1,7 @@
-# AngularJS Phone Catalog Tutorial Application
+# AngularJS Application
 
 
 ## Overview
-
-This application takes the developer through the process of building a web-application using
-AngularJS. The application is loosely based on the **Google Phone Gallery**, which no longer exists.
-Here is a historical reference: [Google Phone Gallery on WayBack][google-phone-gallery]
-
-Each tagged commit is a separate lesson teaching a single aspect of the framework.
-
-The full tutorial can be found at https://docs.angularjs.org/tutorial.
-
-
-## Prerequisites
-
-### Git
-
-- A good place to learn about setting up git is [here][git-setup].
-- You can find documentation and download git [here][git-home].
 
 ### Node.js and Tools
 
@@ -262,10 +246,7 @@ package.json             --> Node.js specific metadata, including development to
 package-lock.json        --> Npm specific metadata, including versions of installed development tools dependencies
 ```
 
-## Contact
-
-For more information on AngularJS, please check out https://angularjs.org/.
-
+## Links
 
 [angular-seed]: https://github.com/angular/angular-seed
 [git-home]: https://git-scm.com/
